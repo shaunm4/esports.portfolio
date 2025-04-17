@@ -1,0 +1,126 @@
+/* Sets the main font, background, and text color for the whole page */
+body {
+    font-family: 'Verdana', Tahoma, Trebuchet MS;
+    background-color: #f7db3d;
+    color: #2847c0;
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between nav and logo */
+    align-items: center; /* Center align nav and logo */
+    padding: 20px 40px; /* Add space inside header */
+    position: sticky;
+    top: 0;
+    background: #f7db3d;
+
+    z-index: 1000; /* Ensure header is on top of other elements */
+}
+
+.logo {
+    font-size: 2rem; /* Large font for logo */
+    font-weight: bold;
+    color: #2847c0; /* Logo text color */
+}
+
+/* Changes link color on hover */
+nav a:hover {
+    color: #14cd1a;
+}
+
+section {
+    max-width: 800px; /* Limit section width for readability */
+    margin: 40px auto; /* Center section horizontally and adds vertical space*/
+    padding: 30px 20px; /* Add space inside section */
+    background: #f7db3d; /* Background color for section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4 24px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    border: 15px solid #2847c0; /* Border color */
+    border-radius: 25px; /* Rounded corners */
+}
+
+.center-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+h2 {
+    color:#2847c0; /* Accent color for section heading */
+    margin-bottom: 16px; /* Space below heading */
+    text-align: center;
+    
+}
+
+h3 {
+    color: #2847c0; /* Accent color for subheading */
+    margin-top: 20px; /* Space above subheading */
+    margin-bottom: 10 px; /* Space below subheading */
+    text-align: center;
+
+}
+
+ul {
+    list-style-type: disc inside; /* Bullet points for list items */
+    padding-left: 20px 40px; /* space below each block */
+}
+/* Adds spacing between blocks in resume, goals, and development sections */
+.resume-block, .esports-and-gaming-goals-block, .dev-block {
+    margin-bottom: 20px;
+}
+
+.photo-grid {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next row */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Space between photo items */
+
+}
+/* Styles each photo item */
+.photo-item {
+    background: #2847c0; /* lightly darker background for photo cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Box shadow for depth */
+    padding: 10px; /* Space inside photo card */
+    width: 150px; /* Fixed width for photo cards */
+    max-width: 150px; /* Maximum width for photo cards */
+    text-align: center; /* Center text inside photo cards */
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.photo-item img {
+    width: 100%; /* Image width */
+    height: auto; /* Image height */
+    object-fit: cover; /* Crops image to fit box */
+    border-radius: 6px; /* Rounded corners for image */
+    margin-bottom: 8px; /* Space below image */
+    max-width: 180px;
+    justify-content: center;
+    gap: 20px;
+
+  }
+
+/* Responsive design for mobile devices */
+@media (max-width: 900px) {
+    section {
+      max-width: 95vw; /* Makes section almost full width on small screens */
+      padding: 20px 5vw; /* Adjusts padding for small screens */
+    }
+    .photos-grid {
+      flex-direction: column; /* Stacks photo items vertically */
+      align-items: center; /* Centers photo items */
+    }
+    .photo-item {
+      width: 90vw; /* Makes photo cards almost full width */
+    }
+    .photo-item img {
+      width: 85vw; /* Makes images almost full width */
+      height: auto; /* Maintains aspect ratio */
+    }
+  }
+  
